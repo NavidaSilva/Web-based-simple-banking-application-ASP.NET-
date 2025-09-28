@@ -1,0 +1,533 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        form, .section, .transaction-section {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input, select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+        }
+
+            input:focus, select:focus {
+                border-color: #4CAF50;
+                outline: none;
+            }
+
+        button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+        .small-text {
+            font-size: 12px;
+            color: #888;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .transaction-section {
+            padding: 20px;
+            text-align: left;
+        }
+
+            .transaction-section h3 {
+                margin-top: 0;
+            }
+
+        #transactionResults ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        #transactionResults li {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .sort-filter-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+            .sort-filter-group div {
+                width: 48%;
+            }
+
+        #transactionResults {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    
+
+    <div id="adminProfileInfo"></div> <!-- Admin profile info will be dynamically updated here -->
+    <!-- Section: Search Users -->
+    <div class="section">
+        <h2>Search for Users</h2>
+        <form id="searchUserForm">
+            <label for="searchBy">Search by:</label>
+            <select id="searchBy">
+                <option value="userId">User ID</option>
+                <option value="name">Name</option>
+                <option value="accountNumber">Account Number</option>
+            </select>
+
+            <label for="searchTerm">Search Term:</label>
+            <input type="text" id="searchTerm" required />
+
+            <button type="button" onclick="searchUsers()">Search</button>
+        </form>
+
+        <div id="searchResults"></div> <!-- Search results will be displayed here -->
+    </div>
+
+    <!-- Section: Manage User Accounts -->
+    <div class="section">
+        <h2>Manage User Accounts</h2>
+        <form id="manageUserForm">
+            <label for="action">Action:</label>
+            <select id="action">
+                <option value="create">Create</option>
+                <option value="edit">Edit</option>
+                <option value="deactivate">Deactivate</option>
+            </select>
+
+            <label for="userName">User Name:</label>
+            <input type="text" id="userName" />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" />
+
+            <label for="phone">Phone Number:</label>
+            <input type="number" id="phone" />
+
+            <label for="pw">Password:</label>
+            <input type="password" id="pw" />
+
+            <label for="userId">User ID: <span class="small-text">User ID will be generated for new accounts. Provide User ID for updating or deactivating accounts.</span></label>
+            <input type="number" id="userId" />
+
+            <button type="button" onclick="manageUser()">Submit</button>
+        </form>
+
+        <div id="manageUserResult"></div> <!-- Manage user results will be displayed here -->
+    </div>
+
+    <!-- Section: View All Transactions -->
+    <div class="transaction-section">
+        <h2>View All Transactions</h2>
+
+        <!-- Sort and Filter Options -->
+        <div class="sort-filter-group">
+            <div>
+                <label for="sortBy">Sort by:</label>
+                <select id="sortBy">
+                    <option value="amount">Amount</option>
+                    <option value="date">Date</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="accountNumberFilter">Filter by Account Number:</label>
+                <input type="number" id="accountNumberFilter" placeholder="Enter account number" />
+            </div>
+        </div>
+
+        <button type="button" onclick="fetchTransactions()">Load Transactions</button>
+
+        <div id="transactionResults"></div> <!-- Transactions will be displayed here -->
+    </div>
+
+
+
+
+    <!-- Section: Create Account -->
+    <div class="section">
+        <h2>Create Account</h2>
+
+        <form id="createAccountForm">
+
+
+            <label for="userId">User ID:</label>
+            <input type="number" id="userID" required />
+
+            <label for="accNumber">Account Number:</label>
+            <input type="number" id="accNumber" required />
+
+            <label for="accType">Account Type:</label>
+            <select id="accType" required>
+                <option value="savings">Savings</option>
+                <option value="checking">Checking</option>
+            </select>
+
+            <label for="accBalance">Account Balance:</label>
+            <input type="number" id="accBalance" required />
+
+            <label for="accStatus">Account Status:</label>
+            <select id="accStatus" required>
+                <option value="open">Open</option>
+                <option value="closed">Closed</option>
+            </select>
+
+            <button type="button" onclick="createAccount()">Create Account</button>
+        </form>
+
+        <div id="createAccountResult"></div> <!-- Result of account creation will be displayed here -->
+    </div>
+
+    <button id="logoutBtn" onclick="window.location.href='/presentation/Home'">Log Out</button>
+
+
+   
+    <script>
+
+       
+
+        async function fetchTransactions() {
+            try {
+                const response = await fetch(`/admin/getAllTransactions`); // Update this endpoint
+
+                if (!response.ok) {
+                    throw new Error('Failed to fetch transactions.');
+                }
+
+                let transactions = await response.json();
+
+                // Get selected sorting criteria
+                const sortBy = document.getElementById("sortBy").value;
+                const accountNumberFilter = document.getElementById("accountNumberFilter").value;
+
+                // Filter transactions by account number if a filter is provided
+                if (accountNumberFilter) {
+                    transactions = transactions.filter(transaction => transaction.accNumber == accountNumberFilter);
+                }
+
+                // Sort transactions based on the selected criteria
+                if (sortBy === "amount") {
+                    transactions.sort((a, b) => a.amount - b.amount); // Sort by amount (ascending)
+                } else if (sortBy === "date") {
+                    transactions.sort((a, b) => new Date(a.transDate) - new Date(b.transDate)); // Sort by date (oldest first)
+                }
+
+                displayTransactions(transactions);
+            } catch (error) {
+                document.getElementById("transactionResults").innerHTML = `<p>${error.message}</p>`;
+            }
+        }
+
+        function displayTransactions(transactions) {
+            if (!transactions || transactions.length === 0) {
+                document.getElementById("transactionResults").innerHTML = `<p>No transactions found.</p>`;
+                return;
+            }
+
+            let html = '<h3>Transactions:</h3><ul>';
+            transactions.forEach(transaction => {
+                html += `
+                    <li>
+                        <strong>Transaction ID:</strong> ${transaction.transId},
+                        <strong>Account Number:</strong> ${transaction.accNumber},
+                        <strong>Type:</strong> ${transaction.type},
+                        <strong>Amount:</strong> $${transaction.amount},
+                        <strong>Date:</strong> ${new Date(transaction.transDate).toLocaleString()}
+                    </li>
+                `;
+            });
+            html += '</ul>';
+
+            document.getElementById("transactionResults").innerHTML = html;
+        }
+
+
+
+
+
+
+
+
+
+
+        async function searchUsers() {
+            const searchBy = document.getElementById("searchBy").value;
+            const searchTerm = document.getElementById("searchTerm").value;
+
+            try {
+
+                if (searchBy == "userId") {
+                    const response = await fetch(`/admin/GetAdminProfile?id=${searchTerm}`);
+
+
+                    if (!response.ok) {
+                        throw new Error('No users found.');
+                    }
+
+                    const users = await response.json();
+
+                    document.getElementById("searchResults").innerHTML = `
+                                 <h3>User Profile:</h3>
+                                         <p>Name: ${users.name}</p>
+                                         <p>Email: ${users.email}</p>
+                                         <p>Phone: ${users.phone}</p>
+                                                                 <p>Phone: ${users.password}</p>
+
+                             `;
+                }
+                else if (searchBy == "name") {
+                    const response = await fetch(`/admin/getUserProfilebyName?name=${searchTerm}`);
+
+                    if (!response.ok) {
+                        throw new Error('No users found.');
+                    }
+
+                    const users = await response.json();
+
+                    document.getElementById("searchResults").innerHTML = `
+                                         <h3>User Profile:</h3>
+                                                 <p>Name: ${users.name}</p>
+                                                 <p>Email: ${users.email}</p>
+                                                 <p>Phone: ${users.phone}</p>
+                                                                 <p>Phone: ${users.password}</p>
+                                            `;
+
+                }
+
+                else if (searchBy == "accountNumber") {
+                    const response = await fetch(`/admin/getUserProfilebyAcc?acc=${searchTerm}`);
+
+                    if (!response.ok) {
+                        throw new Error('No users found.');
+                    }
+
+                    const users = await response.json();
+
+                    document.getElementById("searchResults").innerHTML = `
+                                                 <h3>User Profile:</h3>
+                                                         <p>Name: ${users.name}</p>
+                                                         <p>Email: ${users.email}</p>
+                                                         <p>Phone: ${users.phone}</p>
+                                                         <p>Phone: ${users.password}</p>
+                                             `;
+               }                                             
+            } catch (error) {
+                document.getElementById("searchResults").innerHTML = `<p>${error.message}</p>`;
+            }
+        }
+
+
+
+        async function manageUser() {
+            const action = document.getElementById("action").value;
+
+            const userId = (action === "create") ? 0 : parseInt(document.getElementById("userId").value) || 0; // Assuming you have an input element with id 'userId'
+
+            const name = document.getElementById("userName").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const password = document.getElementById("pw").value;
+
+            if (action === "edit" || action === "create") 
+            { 
+                if (userId === null || userId === "" ||
+                name === null || name === "" ||
+                email === null || email === "" ||
+                phone === null || phone === "" ||
+                password === null || password === "") 
+                {
+                    // At least one value is null or empty
+                    alert("One or more fields are empty.");
+                    return; // Or handle the error in another way
+                }
+            }
+
+            const userPayload = { userId, name, email, phone, password };
+
+            try {
+                if (action === "create") {
+                    const response = await fetch(`/admin/createUser`, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(userPayload)
+                    });
+                    document.getElementById("manageUserResult").innerHTML = `<p>Action '${action}' was successful!</p>`;
+                } 
+                else if (action === "edit") {
+                    const response = await fetch(`/admin/editUser`, { // Assuming you have an edit endpoint
+                        method: "PUT", // Typically, edit/update actions use PUT
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(userPayload)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error("Failed to edit user.");
+                    }
+
+                    document.getElementById("manageUserResult").innerHTML = `<p>Action '${action}' was successful!</p>`;
+                } 
+                else if (action === "deactivate") {
+                    const userId = document.getElementById("userId").value; // Get the userId for deactivation
+
+                    if (!userId) {
+                        throw new Error("User ID is required for deactivation.");
+                    }
+
+                    const response = await fetch(`/admin/DeleteUser?id=${userId}`, { // Send userId in the URL
+                        method: "DELETE",
+                    });
+
+                    if (!response.ok) {
+                        throw new Error("Failed to delete user.");
+                    }
+
+                    document.getElementById("manageUserResult").innerHTML = `<p>Action '${action}' was successful!</p>`;
+                } else {
+                    throw new Error("Invalid action specified.");
+                }
+
+                
+
+
+
+            } catch (error) {
+                document.getElementById("manageUserResult").innerHTML = `<p>${error.message}</p>`;
+            }
+
+
+        }
+
+                      
+
+
+
+        async function createAccount() {
+            console.log("Create Account function triggered"); // Debugging message
+
+            //const userId = document.getElementById("userId").value;
+            const userId = document.getElementById("userID").value; // Use parseInt
+            const accNumber = document.getElementById("accNumber").value;
+            const accType = document.getElementById("accType").value;
+            const accBalance = document.getElementById("accBalance").value;
+            const accStatus = document.getElementById("accStatus").value;
+
+            console.log(`Values: ${userId}, ${accNumber}, ${accType}, ${accBalance}, ${accStatus}`); // Debugging message
+
+            if (userId === "") {
+                document.getElementById("createAccountResult").innerHTML = `<p style="color:red;">All fields are required  1.</p>`;
+                return;
+            }
+            else if (!accNumber) {
+                document.getElementById("createAccountResult").innerHTML = `<p style="color:red;">All fields are required  2.</p>`;
+                return;
+            }
+            else if (accType === "") {
+                document.getElementById("createAccountResult").innerHTML = `<p style="color:red;">All fields are required  3.</p>`;
+                return;
+            }
+            else if (accBalance === "") {
+                document.getElementById("createAccountResult").innerHTML = `<p style="color:red;">All fields are required  4.</p>`;
+                return;
+            }
+            else if (accStatus === "") {
+                document.getElementById("createAccountResult").innerHTML = `<p style="color:red;">All fields are required  5.</p>`;
+                return;
+            }
+
+
+            const accountPayload = {
+                userId: parseInt(userId),
+                accNumber: parseInt(accNumber),
+                accType: accType,
+                accBalance: parseFloat(accBalance),
+                accStatus: accStatus
+            };
+
+            console.log("Sending payload: ", accountPayload); // Debugging message
+
+            try {
+                const response = await fetch(`/admin/CreateAccount`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(accountPayload)
+                });
+
+                const result = await response.text();
+                console.log("Response from server: ", result); // Debugging message
+
+                if (response.ok) {
+                    document.getElementById("createAccountResult").innerHTML = `<p style="color:green;">${result}</p>`;
+                } else {
+                    document.getElementById("createAccountResult").innerHTML = `<p style="color:red;">${result}</p>`;
+                }
+            } catch (error) {
+                document.getElementById("createAccountResult").innerHTML = `<p style="color:red;">Failed to create account. Error: ${error.message}</p>`;
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,407 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Navida\\Downloads\\tu 8\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|c:\\users\\navida\\downloads\\tu 8\\presentation\\views\\home\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\home\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|c:\\users\\navida\\downloads\\tu 8\\presentation\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|c:\\users\\navida\\downloads\\tu 8\\presentation\\views\\home\\userdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\home\\userdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|c:\\users\\navida\\downloads\\tu 8\\presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|c:\\users\\navida\\downloads\\tu 8\\presentation\\logs.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\logs.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|c:\\users\\navida\\downloads\\tu 8\\presentation\\helper\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\helper\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|c:\\users\\navida\\downloads\\tu 8\\presentation\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|c:\\users\\navida\\downloads\\tu 8\\presentation\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|c:\\users\\navida\\downloads\\tu 8\\presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|c:\\users\\navida\\downloads\\tu 8\\presentation\\controllers\\userprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\userprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|c:\\users\\navida\\downloads\\tu 8\\presentation\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|c:\\users\\navida\\downloads\\tu 8\\bank\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|solutionrelative:bank\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|c:\\users\\navida\\downloads\\tu 8\\bank\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|solutionrelative:bank\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|c:\\users\\navida\\downloads\\tu 8\\bank\\data\\dbmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|solutionrelative:bank\\data\\dbmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|c:\\users\\navida\\downloads\\tu 8\\bank\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|solutionrelative:bank\\controllers\\transactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|c:\\users\\navida\\downloads\\tu 8\\bank\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|solutionrelative:bank\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|c:\\users\\navida\\downloads\\tu 8\\presentation\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1AEAA18-504A-41AC-8663-B2B410B499FF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|c:\\users\\navida\\downloads\\tu 8\\bank\\models\\withdrawrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|solutionrelative:bank\\models\\withdrawrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|c:\\users\\navida\\downloads\\tu 8\\bank\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|solutionrelative:bank\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|c:\\users\\navida\\downloads\\tu 8\\bank\\controllers\\userprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|solutionrelative:bank\\controllers\\userprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|c:\\users\\navida\\downloads\\tu 8\\bank\\models\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|solutionrelative:bank\\models\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|c:\\users\\navida\\downloads\\tu 8\\bank\\models\\transact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|solutionrelative:bank\\models\\transact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|c:\\users\\navida\\downloads\\tu 8\\bank\\models\\depositrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|solutionrelative:bank\\models\\depositrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|c:\\users\\navida\\downloads\\tu 8\\bank\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{957AAF16-3A7E-452A-8B1A-8A7BFCF44310}|bank\\bank.csproj|solutionrelative:bank\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 22,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DBManager.cs",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Data\\DBManager.cs",
+              "RelativeDocumentMoniker": "bank\\Data\\DBManager.cs",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Data\\DBManager.cs",
+              "RelativeToolTip": "bank\\Data\\DBManager.cs",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAswLEAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T12:03:48.266Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TransactionController.cs",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Controllers\\TransactionController.cs",
+              "RelativeDocumentMoniker": "bank\\Controllers\\TransactionController.cs",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Controllers\\TransactionController.cs",
+              "RelativeToolTip": "bank\\Controllers\\TransactionController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T03:06:50.814Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Logs.txt",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\Logs.txt",
+              "RelativeDocumentMoniker": "Presentation\\Logs.txt",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\Logs.txt",
+              "RelativeToolTip": "Presentation\\Logs.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-10-01T04:02:26.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Logger.cs",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\Helper\\Logger.cs",
+              "RelativeDocumentMoniker": "Presentation\\Helper\\Logger.cs",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\Helper\\Logger.cs",
+              "RelativeToolTip": "Presentation\\Helper\\Logger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T03:58:00.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Presentation\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\appsettings.Development.json",
+              "RelativeToolTip": "Presentation\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-01T03:37:45.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\appsettings.json",
+              "RelativeDocumentMoniker": "Presentation\\appsettings.json",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\appsettings.json",
+              "RelativeToolTip": "Presentation\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-01T03:37:41.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "WithdrawRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Models\\WithdrawRequest.cs",
+              "RelativeDocumentMoniker": "bank\\Models\\WithdrawRequest.cs",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Models\\WithdrawRequest.cs",
+              "RelativeToolTip": "bank\\Models\\WithdrawRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T11:31:26.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Program.cs",
+              "RelativeDocumentMoniker": "bank\\Program.cs",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Program.cs",
+              "RelativeToolTip": "bank\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T11:31:19.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "bank\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "bank\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T08:15:03.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Transact.cs",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Models\\Transact.cs",
+              "RelativeDocumentMoniker": "bank\\Models\\Transact.cs",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Models\\Transact.cs",
+              "RelativeToolTip": "bank\\Models\\Transact.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:22:06.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DepositRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Models\\DepositRequest.cs",
+              "RelativeDocumentMoniker": "bank\\Models\\DepositRequest.cs",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Models\\DepositRequest.cs",
+              "RelativeToolTip": "bank\\Models\\DepositRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T08:15:59.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Account.cs",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Models\\Account.cs",
+              "RelativeDocumentMoniker": "bank\\Models\\Account.cs",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Models\\Account.cs",
+              "RelativeToolTip": "bank\\Models\\Account.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T07:50:27.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserDashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\Views\\Home\\UserDashboard.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Home\\UserDashboard.cshtml",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\Views\\Home\\UserDashboard.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Home\\UserDashboard.cshtml",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAhwKsAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-30T07:43:39.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "bank\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Properties\\launchSettings.json",
+              "RelativeToolTip": "bank\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-30T06:20:16.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Presentation\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Presentation\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-30T06:20:05.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "adminController.cs",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\Controllers\\adminController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\adminController.cs",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\Controllers\\adminController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\adminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T05:52:27.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserprofileController.cs",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Controllers\\UserprofileController.cs",
+              "RelativeDocumentMoniker": "bank\\Controllers\\UserprofileController.cs",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Controllers\\UserprofileController.cs",
+              "RelativeToolTip": "bank\\Controllers\\UserprofileController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T04:56:04.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Controllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "bank\\Controllers\\AccountsController.cs",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Controllers\\AccountsController.cs",
+              "RelativeToolTip": "bank\\Controllers\\AccountsController.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T04:55:56.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "userprofileController.cs",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\Controllers\\userprofileController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\userprofileController.cs",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\Controllers\\userprofileController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\userprofileController.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAFoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T04:52:58.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UserProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Models\\UserProfile.cs",
+              "RelativeDocumentMoniker": "bank\\Models\\UserProfile.cs",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\bank\\Models\\UserProfile.cs",
+              "RelativeToolTip": "bank\\Models\\UserProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T14:04:07.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-28T09:54:24.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAC0AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-27T11:41:55.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminDashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\Views\\Home\\AdminDashboard.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Home\\AdminDashboard.cshtml",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\Views\\Home\\AdminDashboard.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Home\\AdminDashboard.cshtml",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAHMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-28T09:02:13.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\Program.cs",
+              "ToolTip": "C:\\Users\\Navida\\Downloads\\tu 8\\Presentation\\Program.cs",
+              "RelativeToolTip": "Presentation\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T11:39:44.255Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        div {
+            margin: 0 auto;
+            width: 300px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #3e8e41;
+            }
+    </style>
+</head>
+<body>
+    <h2>Select Dashboard</h2>
+    <div>
+        <button onclick="window.location.href='/presentation/Home/UserDashboard'">User Dashboard</button>
+        <button onclick="window.location.href='/presentation/Home/AdminDashboard'">Admin Dashboard</button>
+    </div>
+</body>
+</html>

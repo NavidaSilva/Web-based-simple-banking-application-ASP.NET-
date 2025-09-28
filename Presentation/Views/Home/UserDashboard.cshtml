@@ -1,0 +1,492 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Banking Dashboard</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        /* Flex container for two-column layout */
+        .dashboard {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        /* Left Column */
+        .left-column {
+            flex: 1;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Right Column */
+        .right-column {
+            flex: 1;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Form and Input Styles */
+        form, div {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="number"], input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #profileInfo, #accountInfo, #transInf, #depositResult, #withdrawResult {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        /* Log Out Button */
+        #logoutBtn {
+            margin-top: 20px;
+            background-color: #ff6666;
+        }
+        #logoutBtn:hover {
+            background-color: #ff4d4d;
+        }
+    </style>
+</head>
+<body>
+       <h1>Banking Dashboard</h1>
+
+    <div class="dashboard">
+        <!-- Left Column: User profile, Account Info, Transactions -->
+        <div class="left-column">
+            <h2>Retrieve User Profile</h2>
+            <div>
+                <label for="userId">Enter User ID: </label>
+                <input type="number" id="userId" /><br>
+                <label for="password">Enter Password: </label>
+                <input type="password" id="password" /><br>
+                <button onclick="getUserProfile()">Log in</button>
+            </div>
+            <div id="profileInfo">
+                <!-- User profile info will be dynamically updated here -->
+            </div>
+            <div id="accountInfo">
+                <!-- Account info will be dynamically updated here -->
+            </div>
+            <div id="transInf">
+                <!-- Transactions info will be dynamically updated here -->
+            </div>
+        </div>
+
+        <!-- Right Column: Update Profile, Deposit, Withdrawal -->
+        <div class="right-column">
+            <!-- Update Profile Section -->
+            <div id="updateSection">
+                <h2>Update Profile</h2>
+                <form id="updateProfile" onsubmit="updateProfile(event)" style="display: none;"> <!-- display none  -->
+                    <label for="Name">Name: </label>
+                    <input type="text" id="Name" /><br>
+
+                    <label for="newEmail">New Email: </label>
+                    <input type="email" id="newEmail" /><br>
+
+                    <label for="newPhone">New Phone: </label>
+                    <input type="text" id="newPhone" /><br>
+
+                    <label for="newPassword">New Password: </label>
+                    <input type="password" id="newPassword" /><br>
+
+                    <button type="submit">Update Profile</button>  
+
+
+                </form>
+            </div>
+
+            <!-- Deposit Section -->
+            <div id="depositSection" style="display: none;"><!-- display none  -->
+                <h3>Deposit Money</h3>
+                <label for="accNumber">Account Number:</label>
+                <input type="number" id="accNumber" /><br>
+                <label for="depositAmount">Deposit Amount:</label>
+                <input type="number" id="depositAmount" step="0.01" /><br>
+                <button onclick="makeDeposit()">Deposit</button>
+            </div>
+
+            <div id="depositResult">
+                <!-- Deposit result will be displayed here -->
+            </div>
+
+            <!-- Withdraw Section -->
+            <div id="withdrawSection" style="display: none;">
+                <h3>Withdraw Money</h3>
+                <label for="withdrawAccNumber">Account Number:</label>
+                <input type="number" id="withdrawAccNumber" /><br>
+                <label for="withdrawAmount">Withdrawal Amount:</label>
+                <input type="number" id="withdrawAmount" step="0.01" /><br>
+                <button onclick="makeWithdrawal()">Withdraw</button>
+            </div>
+
+            <div id="withdrawResult">
+                <!-- Withdraw result will be displayed here -->
+            </div>
+
+            <!-- Transfer Section -->
+            <div id="transferSection" style="display: none;">
+                <h3>Transfer Money</h3>
+                <label for="fromAccNumber">From Account Number:</label>
+                <input type="number" id="fromAccNumber" /><br>
+                <label for="toAccNumber">To Account Number:</label>
+                <input type="number" id="toAccNumber" /><br>
+                <label for="transferAmount">Transfer Amount:</label>
+                <input type="number" id="transferAmount" step="0.01" /><br>
+                <button onclick="makeTransfer()">Transfer</button>
+            </div>
+
+            <div id="transferResult">
+                <!-- Transfer result will be displayed here -->
+            </div>
+
+            <button id="logoutBtn" onclick="window.location.href='/presentation/Home'">Log Out</button>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+<script>
+    async function getUserProfile() {
+        const userId = document.getElementById("userId").value;
+        const password = document.getElementById("password").value;
+
+        if (!userId || !password) {
+            alert("Please enter both User ID and Password");
+            return;
+        }
+
+        try {
+            // Fetch the profile by User ID
+            const response = await fetch(`/UserProfile/GetUserProfile?id=${userId}`);
+            if (!response.ok) {
+                throw new Error('Profile not found');
+            }
+
+            const data = await response.json();
+
+            // Check if the password matches
+            if (data.password !== password) {
+                document.getElementById("profileInfo").innerHTML = `<p>Incorrect password</p>`;
+                return;
+            }
+            
+            //make update profile visible 
+            document.getElementById("updateProfile").style.display = "block"; // To show the form
+            document.getElementById("depositSection").style.display = "block"; // To show the form
+            document.getElementById("withdrawSection").style.display = "block"; // To show the form
+            document.getElementById("transferSection").style.display = "block"; // To show the form
+
+
+
+            // Display profile information
+            document.getElementById("profileInfo").innerHTML = `
+                    <h3>User Profile:</h3>
+                    <p>Name: ${data.name}</p>
+                    <p>Email: ${data.email}</p>
+                    <p>Phone: ${data.phone}</p>
+                `;
+
+
+            // Fetch account info and display
+            await fetchAccounts(userId);
+
+        } catch (error) {
+            document.getElementById("profileInfo").innerHTML = `<p>${error.message}</p>`;
+        }
+    }
+
+
+    async function fetchAccounts(userId) {
+        try {
+            // Fetch account info
+            const response = await fetch(`/UserProfile/GetAccountInfo?userId=${userId}`);
+            if (!response.ok) {
+                throw new Error('Account not found');
+            }
+
+            const accounts = await response.json();
+            let accountHtml = `<h3>Account Information:</h3>`;
+
+            if (accounts.length === 0) {
+                accountHtml += `<p>No accounts found.</p>`;
+            } else {
+                // Iterate over accounts and create HTML content with a "View Transactions" button
+                for (const account of accounts) {
+                    accountHtml += `
+                            <div id="account-${account.accNumber}">
+                                <p>Account Number: ${account.accNumber}</p>
+                                <p>Account Type: ${account.accType}</p>
+                                <p>Balance: ${account.accBalance}</p>
+                                <p>Status: ${account.accStatus}</p>
+                                <button onclick="fetchTransactions(${account.accNumber})">View Transactions</button>
+                                <div id="trans-${account.accNumber}">
+                                    <!-- Transactions will be loaded here when the button is clicked -->
+                                </div>
+                            </div>
+                            <hr/>
+                        `;
+                }
+            }
+
+            document.getElementById("accountInfo").innerHTML = accountHtml;
+
+        } catch (error) {
+            document.getElementById("accountInfo").innerHTML = `<p>${error.message}</p>`;
+        }
+    }
+
+
+
+    async function fetchTransactions(accNumber) {
+        const transDiv = document.getElementById(`trans-${accNumber}`);
+
+        // Check if transactions are currently displayed (i.e., the div is not empty)
+        if (transDiv.innerHTML.trim() !== "") {
+            // Hide the transactions by clearing the content
+            transDiv.innerHTML = "";
+            return; // Exit the function as we are hiding the transactions
+        }
+
+        // If transactions are not displayed, fetch and display them
+        try {
+            const response = await fetch(`/UserProfile/GetTrasnofAcc?accNu=${accNumber}`);
+            if (!response.ok) {
+                throw new Error('Transactions not found');
+            }
+
+            const transactions = await response.json();
+            let transactsHtml = `<h7>Transaction Information for Account ${accNumber}:</h7>`;
+
+            if (transactions.length === 0) {
+                transactsHtml += `<p>No transactions found for this account.</p>`;
+            } else {
+                transactions.forEach(transact => {
+                    transactsHtml += `
+                        <div>
+                            <p>Transaction ID: ${transact.transId}</p>
+                            <p>Type: ${transact.type}</p>
+                            <p>Amount: ${transact.amount}</p>
+                            <p>Date: ${transact.transDate}</p>
+                        </div>
+                        <hr/>
+                    `;
+                });
+            }
+
+            // Ensure the account section exists before updating
+            if (transDiv) {
+                transDiv.innerHTML = transactsHtml;
+            } else {
+                console.error(`Could not find transaction div for account ${accNumber}`);
+            }
+
+        } catch (error) {
+            if (transDiv) {
+                transDiv.innerHTML = `<p>${error.message}</p>`;
+            }
+        }
+    }
+
+    
+</script>
+
+
+
+
+ 
+
+
+<!-- Update Profile Section -->
+<script>
+    async function updateProfile(event) {
+        event.preventDefault();
+        const userId = document.getElementById("userId").value;
+        const pname = document.getElementById("Name").value;
+        const newEmail = document.getElementById("newEmail").value;
+        const newPhone = document.getElementById("newPhone").value;
+        const newPassword = document.getElementById("newPassword").value;
+
+        if (!newEmail || !newPhone || !newPassword) {
+            alert("All fields are required.");
+            return;
+        }
+
+        try {
+            const response = await fetch(`/Userprofile/UpdateUser`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    userId: userId,
+                    name : pname, 
+                    email: newEmail,
+                    phone: newPhone,
+                    password: newPassword
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error("Failed to update profile");
+            }
+
+            const result = await response.text();
+            alert(result);
+
+            // Hide the update profile form after successful update
+            //document.getElementById("updateProfile").style.display = 'none';
+        } catch (error) {
+            alert(`Error: ${error.message}`);
+        }
+    }
+</script>
+
+
+
+
+<script>
+    async function makeDeposit() {
+        const accNumber = document.getElementById("accNumber").value;
+        const depositAmount = document.getElementById("depositAmount").value;
+
+        if (!accNumber || !depositAmount) {
+            alert("Please enter both Account Number and Deposit Amount.");
+            return;
+        }
+
+        const depositRequest = {
+            AccNumber: parseInt(accNumber),
+            Amount: parseFloat(depositAmount)
+        };
+
+        try {
+            const response = await fetch(`/UserProfile/Deposit`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(depositRequest)
+            });
+
+            const result = await response.text();
+            document.getElementById("depositResult").innerHTML = `<p>${result}</p>`;
+        } catch (error) {
+            document.getElementById("depositResult").innerHTML = `<p>Error: ${error.message}</p>`;
+        }
+    }
+</script>
+
+
+
+<script>
+    async function makeWithdrawal() {
+        const accNumber = document.getElementById("withdrawAccNumber").value;
+        const withdrawAmount = document.getElementById("withdrawAmount").value;
+
+        if (!accNumber || !withdrawAmount) {
+            alert("Please enter both Account Number and Withdrawal Amount.");
+            return;
+        }
+
+        const withdrawRequest = {
+            AccNumber: parseInt(accNumber),
+            Amount: parseFloat(withdrawAmount)
+        };
+
+        try {
+            const response = await fetch(`/UserProfile/Withdraw`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(withdrawRequest)
+            });
+
+            const result = await response.text();
+            document.getElementById("withdrawResult").innerHTML = `<p>${result}</p>`;
+        } catch (error) {
+            document.getElementById("withdrawResult").innerHTML = `<p>Error: ${error.message}</p>`;
+        }
+    }
+</script>
+
+
+
+<script>
+    async function makeTransfer() {
+        const fromAccNumber = document.getElementById("fromAccNumber").value;
+        const toAccNumber = document.getElementById("toAccNumber").value;
+        const transferAmount = document.getElementById("transferAmount").value;
+
+        if (!fromAccNumber || !toAccNumber || !transferAmount) {
+            alert("Please fill in all fields");
+            return;
+        }
+
+        const transferRequest = {
+            FromAccNumber: parseInt(fromAccNumber),
+            ToAccNumber: parseInt(toAccNumber),
+            Amount: parseFloat(transferAmount)
+        };
+
+        try {
+            const response = await fetch('/UserProfile/Transfer', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(transferRequest)
+            });
+
+            if (!response.ok) {
+                throw new Error('Transfer failed');
+            }
+
+            const result = await response.json();
+            document.getElementById("transferResult").innerHTML = `<p>${result.message}</p>`; // Access the message
+        } catch (error) {
+            document.getElementById("transferResult").innerHTML = `<p>${error.message}</p>`;
+        }
+    }
+</script>
